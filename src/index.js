@@ -12,6 +12,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Sobre from './Sobre';
 import Contato from './Contato';
 import Contents from './Contents';
+import Editar from './Editar';
 
 const nome = "Wisner";
 const ano = 2023;
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Contents nome={nome} ano={ano}/>
+      },
+      {
+        path: '/:id',
+        element: <Editar />
       },
       {
         path: '/sobre',
